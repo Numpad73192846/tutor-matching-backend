@@ -95,12 +95,15 @@ DB 조회를 최소화했습니다.
 
 ---
 
-## 📊 Core Domain Tables
+## 📊 Core Domain (DB)
 
-- users
-- tutor_profile
-- booking
-- payment
+- Auth: `users`, `user_auth`, `refresh_token`, `persistent_logins`
+- Tutor: `tutor_profile`, `tutor_document`, `tutor_career`, `tutor_education`
+- Catalog: `subject_group`, `subject`, `language_field`, `tutor_subject`, `tutor_field`, `lesson`
+- Scheduling: `tutor_availability`(OPEN/BOOKED), `booking`(requested/confirmed/canceled/done/paid timestamps)
+- Payment: `payment`, `toss_payment_order`, `toss_payment_order_item`
+- AI: `lesson_ai_summary`, `lesson_ai_homework`
+- Review: `review` (booking 기반)
 - review
 
 예약과 결제 상태 흐름을 고려하여  
